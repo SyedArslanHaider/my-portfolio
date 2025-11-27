@@ -34,7 +34,7 @@ function Projects() {
       title: "Personal Portfolio Website",
       description:
         "Modern, responsive portfolio showcasing my projects and skills with smooth animations and dark mode support.",
-      tech: ["React", "Vite", "CSS3", "Lucide Icons", "Git","ESLint"],
+      tech: ["React", "Vite", "CSS3", "JavaScript", "Lucide Icons", "Git","ESLint"],
       link: "#home",
       github: "https://github.com/SyedArslanHaider/portfolio",
       icon: User,
@@ -48,6 +48,7 @@ function Projects() {
       <div className="projects-grid">
         {projects.map((project, index) => {
           const IconComponent = project.icon;
+          const isInternalLink = project.link.startsWith('#');
           
           return (
             <div key={index} className="project-card">
@@ -71,10 +72,20 @@ function Projects() {
                 </div>
 
                 <div className="project-links">
-                  <a href={project.link} className="project-link">
+                  <a 
+                    href={project.link} 
+                    className="project-link"
+                    target={isInternalLink ? "_self" : "_blank"}
+                    rel={isInternalLink ? "" : "noopener noreferrer"}
+                  >
                     View Project <ExternalLink size={16} />
                   </a>
-                  <a href={project.github} className="project-link">
+                  <a 
+                    href={project.github} 
+                    className="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Source Code <ExternalLink size={16} />
                   </a>
                 </div>

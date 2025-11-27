@@ -28,7 +28,7 @@ const scrollToSection = (sectionId) => {
         setDarkMode={setDarkMode}
         scrollToSection={scrollToSection}
       />
-      <Hero />
+      <Hero scrollToSection={scrollToSection}/>
       <About />
       <Skills />
       <Projects />

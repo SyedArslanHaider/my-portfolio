@@ -70,9 +70,6 @@
 .gradient-yellow {
     background: linear-gradient(135deg, #eab308, #f97316);
 }
-.gradient-purple {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
 .project-icon {
     color: white;
     position: relative;
