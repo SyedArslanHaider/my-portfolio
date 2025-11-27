@@ -66,6 +66,12 @@
     padding: 0.5rem;
 }
 
+.mobile-header-actions {
+    display: none;
+    gap: 0.5rem;
+    align-items: center;
+}
+
 .mobile-nav {
     display: none;
     position: fixed;
@@ -105,5 +111,9 @@
 
     .mobile-menu-btn {
         display: block;
+    }
+
+    .mobile-header-actions {
+        display: flex;
     }
 }

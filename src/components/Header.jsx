@@ -25,9 +25,14 @@ function Header({ darkMode, setDarkMode, scrollToSection }) {
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
             </button>
           </nav>
-          <button className="mobile-menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="mobile-header-actions">
+            <button className="theme-toggle mobile-theme-toggle" onClick={() => setDarkMode(!darkMode)}>
+              {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+            <button className="mobile-menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
+              {menuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </header>
 

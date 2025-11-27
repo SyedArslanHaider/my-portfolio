@@ -1,4 +1,4 @@
-import { ExternalLink, FileText, CloudSun } from "lucide-react";
+import { ExternalLink, FileText, CloudSun, User } from "lucide-react";
 import "../styles/Projects.css";
 
 function Projects() {
@@ -29,6 +29,16 @@ function Projects() {
       github: "https://github.com/SyedArslanHaider/JavaScript-Core-3-Challenges/tree/master/challenge-weather-app",
       icon: CloudSun,
       color: "green",
+    },
+    {
+      title: "Personal Portfolio Website",
+      description:
+        "Modern, responsive portfolio showcasing my projects and skills with smooth animations and dark mode support.",
+      tech: ["React", "Vite", "CSS3", "Lucide Icons", "Git","ESLint"],
+      link: "#home",
+      github: "https://github.com/SyedArslanHaider/portfolio",
+      icon: User,
+      color: "purple",
     },
   ];
 
