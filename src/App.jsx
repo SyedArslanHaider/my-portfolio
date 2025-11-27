@@ -9,14 +9,24 @@ import About from "./components/About";
 import './styles/App.css';
 function App() {
     const [darkMode, setDarkMode] = useState(false);
+
   useEffect(() => {
     document.body.className = darkMode ? 'dark-mode' : 'light-mode';
   }, [darkMode]);
+
+const scrollToSection = (sectionId) => {
+  const el = document.getElementById(sectionId);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
   return (
         <div className="app-container">
       <Header 
         darkMode={darkMode} 
         setDarkMode={setDarkMode}
+        scrollToSection={scrollToSection}
       />
       <Hero />
       <About />
@@ -27,4 +37,5 @@ function App() {
     </div>
   )
 }
+
 export default App
