@@ -1,9 +1,10 @@
+import '../styles/Footer.css';
 function Footer() {
   return (
-    <div>
-      <p>Footer Component</p>
-    </div>
-  )
+    <footer className="footer">
+      <p>&copy; 2025 Syed Arslan. All rights reserved.</p>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
